@@ -1,18 +1,18 @@
 /*!
  * Copyright (c) 2020-2022 Digital Bazaar, Inc. All rights reserved.
  */
-import chai from 'chai';
-import * as base58btc from 'base58-universal';
-import {mockKey, seed} from './mock-data.js';
-import multibase from 'multibase';
-import multicodec from 'multicodec';
+const chai =require('chai');
+const base58btc =require('base58-universal');
+const {mockKey, seed} =require('./mock-data.js');
+const multibase =require('multibase');
+const multicodec =require('multicodec');
 const should = chai.should();
 const {expect} = chai;
 
-import {Ed25519VerificationKey2020} from '../lib/index.js';
-import {
+const {Ed25519VerificationKey2020} =require('../lib/index.js');
+const {
   Ed25519VerificationKey2018
-} from '@digitalbazaar/ed25519-verification-key-2018';
+} =require('@digitalbazaar/ed25519-verification-key-2018');
 
 // multibase base58-btc header
 const MULTIBASE_BASE58BTC_HEADER = 'z';

@@ -1,7 +1,7 @@
 /*
  * Copyright (c) 2020-2022 Digital Bazaar, Inc. All rights reserved.
  */
-export function stringToUint8Array(data) {
+function stringToUint8Array(data) {
   if(typeof data === 'string') {
     // convert data to Uint8Array
     return new TextEncoder().encode(data);
@@ -10,4 +10,8 @@ export function stringToUint8Array(data) {
     throw new TypeError('"data" be a string or Uint8Array.');
   }
   return data;
+}
+
+module.exports={
+  stringToUint8Array
 }

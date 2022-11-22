@@ -1,13 +1,13 @@
 /*!
  * Copyright (c) 2020 Digital Bazaar, Inc. All rights reserved.
  */
-import chai from 'chai';
+const chai =require('chai');
 chai.should();
 
-import {Ed25519VerificationKey2020} from '../lib/index.js';
-import {mockKey, suites} from './mock-data.js';
-import {stringToUint8Array} from './text-encoder.js';
-import * as base58btc from 'base58-universal';
+const {Ed25519VerificationKey2020} =require('../lib/index.js');
+const {mockKey, suites} =require('./mock-data.js');
+const {stringToUint8Array} =require('./text-encoder.js');
+const base58btc =require('base58-universal');
 
 const keyPair = new Ed25519VerificationKey2020({
   controller: 'did:example:1234',
